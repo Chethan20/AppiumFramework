@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-07-26T13:03:47Z" name="Default suite" finished-at="2020-07-26T13:05:36Z" duration-ms="108990">
+    <groups>
+    </groups>
+    <test started-at="2020-07-26T13:03:47Z" name="Default test" finished-at="2020-07-26T13:05:36Z" duration-ms="108990">
+      <class name="test.android.AmazonTest">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:test.android.AmazonTest@4066c471]" started-at="2020-07-26T13:03:47Z" name="beforeTest" finished-at="2020-07-26T13:04:22Z" duration-ms="34600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="orderTV()[pri:0, instance:test.android.AmazonTest@4066c471]" started-at="2020-07-26T13:04:22Z" name="orderTV" finished-at="2020-07-26T13:05:31Z" duration-ms="68871" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderTV -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:test.android.AmazonTest@4066c471]" started-at="2020-07-26T13:05:31Z" name="afterTest" finished-at="2020-07-26T13:05:36Z" duration-ms="5486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.android.AmazonTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
