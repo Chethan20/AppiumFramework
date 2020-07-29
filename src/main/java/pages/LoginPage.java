@@ -70,13 +70,12 @@ public class LoginPage extends AndroidFunctions {
 	 * @param encodedpassword Password encoded
 	 * @throws InterruptedException
 	 */
-	public void inputPassword(String encodedpassword) throws InterruptedException {
+	public void inputPassword(String encodedpassword) {
 		byte[] decodepwd = Base64.getDecoder().decode(encodedpassword.getBytes());
 		String pwd = new String(decodepwd);
 		inputText(password, pwd);
 		closeKeyboard();
 		clickElement(submit_button);
-		Thread.sleep(6000);
 	}
 	
 	/**

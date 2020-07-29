@@ -16,7 +16,7 @@ import utilities.PropertyReader;
 public class AmazonTest extends BaseTest {
 
 	@Test(enabled = true)
-	public void login() throws InterruptedException {
+	public void login() {
 
 		LoginPage login = new LoginPage(driver);
 		login.signIn();
