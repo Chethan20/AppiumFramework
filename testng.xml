@@ -2,11 +2,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 	<listeners>
-		<listener class-name="test.android.Listeners.Reporter" />
+		<listener class-name="tests.Listener" />
 	</listeners>
-	<test thread-count="1" name="Test">
+	<test thread-count="1" name="AmazonApp">
+		<parameter name="PlatformName" value="Android" />
+		<parameter name="AutomationName" value="UiAutomator2" />
 		<classes>
-			<class name="test.android.AmazonTest" />
+			<class name="tests.AmazonTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
