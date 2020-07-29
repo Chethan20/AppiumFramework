@@ -15,11 +15,19 @@ public final class PropertyReader {
 	private static final String configfile = "config";
 	private static final String testdatafile = "testdata";
 
+	/**
+	 * Reads config file
+	 * @return
+	 */
 	public static Properties loadPropertyfile() {
 		setPropertyFile(configfile);
 		return properties;
 	}
 	
+	/**
+	 * Reads testdata file
+	 * @return
+	 */
 	public static Properties loadTestData() {
 		setPropertyFile(testdatafile);
 		return properties;
