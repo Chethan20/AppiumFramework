@@ -13,6 +13,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -21,6 +22,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidStartScreenRecordingOptions;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
+import utilities.ExcelUtil;
 import utilities.PropertyReader;
 
 /**
@@ -84,6 +86,11 @@ public class BaseTest {
 		if (driver != null) {
 			driver.quit();
 		}
+	}
+	
+	@BeforeClass
+	public void beforeClass() throws Exception {
+		ExcelUtil.setExcelFile("TestData.xlsx", "Amazon");
 	}
 	
 	public AndroidDriver<AndroidElement> getDriver(){

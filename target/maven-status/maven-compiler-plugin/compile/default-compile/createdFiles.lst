@@ -1,4 +1,5 @@
 pages\OrderProductPage.class
+utilities\Excelutil.class
 pages\LoginPage.class
 utilities\AndroidFunctions.class
 utilities\PropertyReader.class

@@ -7,6 +7,7 @@ import org.testng.asserts.SoftAssert;
 
 import pages.LoginPage;
 import pages.OrderProductPage;
+import utilities.ExcelUtil;
 import utilities.PropertyReader;
 
 /**
@@ -15,25 +16,24 @@ import utilities.PropertyReader;
  */
 public class AmazonTest extends BaseTest {
 
-	@Test(enabled = true)
-	public void login() {
-
+	@Test(priority=1)
+	public void login() throws Exception {
 		LoginPage login = new LoginPage(driver);
 		login.signIn();
-		login.inputEmail(PropertyReader.loadTestData().getProperty("username"));
-		login.inputPassword(PropertyReader.loadTestData().getProperty("password"));
+		login.inputEmail(ExcelUtil.getCellData(0,1));
+		login.inputPassword(ExcelUtil.getCellData(1,1));
 		boolean loginverification = login.verifyLogin();
 
 		assertTrue(loginverification);
 	}
 
-	@Test
-	public void orderTV() {
+	@Test(priority=2)
+	public void orderTV() throws Exception {
 		SoftAssert verify = new SoftAssert();
 		OrderProductPage order = new OrderProductPage(driver);
 
-		order.searchProduct(PropertyReader.loadTestData().getProperty("productsearch"));
-		boolean checkselected = order.selectByBrand(PropertyReader.loadTestData().getProperty("brandname"));
+		order.searchProduct(ExcelUtil.getCellData(2,1));
+		boolean checkselected = order.selectByBrand(ExcelUtil.getCellData(3,1));
 		verify.assertTrue(checkselected);
 		order.getProductDetails();
 		order.addToCart();
