@@ -24,7 +24,7 @@ public final class PropertyReader {
 	}
 
 	private static Properties setPropertyFile(String filename) {
-		String filepath = System.getProperty("user.dir") + "\\Resources\\" + filename + ".properties";
+		String filepath = System.getProperty("user.dir") + filename + ".properties";
 
 		try {
 			FileReader readfile = new FileReader(filepath);
